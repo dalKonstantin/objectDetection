@@ -23,14 +23,23 @@ int main(int, char**) {
         "model/ssd_mobilenet_v2_coco_2018_03_29.pbtxt",
         "TensorFlow");
 
+
+
     // capture the video
     VideoCapture cap(0);
+
+
+    // cuda enaable
+    
+    model.setPreferableTarget(DNN_TARGET_CUDA);
+    model.setPreferableBackend(DNN_BACKEND_CUDA);
+
     // get the video frames' width and height for proper saving of videos
     int frame_width = static_cast<int>(cap.get(3));
     int frame_height = static_cast<int>(cap.get(4));
     // create the `VideoWriter()` object
-    VideoWriter out("../../../outputs/video_result.avi", VideoWriter::fourcc('M', 'J', 'P', 'G'), 30,
-        Size(frame_width, frame_height));
+    //VideoWriter out("../../../outputs/video_result.avi", VideoWriter::fourcc('M', 'J', 'P', 'G'), 30,
+    //    Size(frame_width, frame_height));
 
     while (cap.isOpened()) {
         Mat image;
@@ -66,7 +75,7 @@ int main(int, char**) {
         }
 
         imshow("image", image);
-        out.write(image);
+        //out.write(image);
         int k = waitKey(10);
         if (k == 113) {
             break;
