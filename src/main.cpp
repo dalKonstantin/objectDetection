@@ -11,7 +11,7 @@ using namespace dnn;
 
 int main(int, char**) {
     std::vector<std::string> class_names;
-    ifstream ifs(string("model/object_detection_classes_coco.txt").c_str());
+    ifstream ifs(string("../model/object_detection_classes_coco.txt").c_str());
     string line;
     while (getline(ifs, line))
     {
@@ -19,8 +19,8 @@ int main(int, char**) {
     }
 
     // load the neural network model
-    auto model = readNet("model/frozen_inference_graph.pb",
-        "model/ssd_mobilenet_v2_coco_2018_03_29.pbtxt",
+    auto model = readNet("../model/frozen_inference_graph.pb",
+        "../model/ssd_mobilenet_v2_coco_2018_03_29.pbtxt",
         "TensorFlow");
 
 
