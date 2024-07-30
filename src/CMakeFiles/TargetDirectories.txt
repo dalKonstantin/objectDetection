@@ -1,3 +1,0 @@
-/home/cvtest/Desktop/objectDetector/objectDetection/src/CMakeFiles/rebuild_cache.dir
-/home/cvtest/Desktop/objectDetector/objectDetection/src/CMakeFiles/main.dir
-/home/cvtest/Desktop/objectDetector/objectDetection/src/CMakeFiles/edit_cache.dir
