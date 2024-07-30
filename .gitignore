@@ -7,9 +7,10 @@
 *.vcxproj
 *.vcxproj.filters
 *.sln
-CmakeCache.txt
+CMakeCache.txt
 cmake_install.cmake
 src/CMakeFiles
+Makefile
 
 
 # User-specific files
