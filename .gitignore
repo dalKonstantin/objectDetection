@@ -3,6 +3,15 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+
+*.vcxproj
+*.vcxproj.filters
+*.sln
+CmakeCache.txt
+cmake_install.cmake
+src/CMakeFiles
+
+
 # User-specific files
 *.rsuser
 *.suo
